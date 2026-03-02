@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Резюме</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f6f6f6;
+}
+
+/* меню */
+.menu{
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:#f4c2c2;
+    text-align:center;
+}
+.menu li{ display:inline-block; }
+.menu a{
+    display:block;
+    padding:12px 20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+.menu a:hover{ background:#eaa5b0; }
+
+/* контейнер */
+.wrapper{
+    width:900px;
+    margin:20px auto;
+    display:flex;
+    background:white;
+}
+
+/* ліва колонка */
+.sidebar{
+    width:260px;
+    background:#f4c2c2;
+    padding:20px;
+    color:#333;
+}
+
+.photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    display:block;
+    margin:0 auto 20px;
+    object-fit:cover;
+}
+
+.sidebar h3{
+    border-bottom:1px solid #333;
+    padding-bottom:5px;
+    margin-top:20px;
+}
+
+/* права частина */
+.content{
+    flex:1;
+    padding:25px;
+}
+
+h1{
+    margin-top:0;
+}
+
+/* блок досвіду */
+.job{
+    margin-bottom:20px;
+}
+
+.job-header{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+}
+
+.date{
+    color:#666;
+}
+
+.section-title{
+    border-bottom:2px solid #f4c2c2;
+    margin-top:25px;
+    padding-bottom:5px;
+}
+
+pre{
+    background:#eee;
+    padding:10px;
+    overflow:auto;
+}
+
+/* Стилі для кнопок-посилань у Портфоліо */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f4c2c2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: 1px solid #d4a2a2;
+}
+
+.btn-link:hover {
+    background-color: #eaa5b0;
+    color: #000;
+}
+</style>
+</head>
+
+<body>
+
+<ul class="menu">
+<li><a href="#about">Головна</a></li>
+<li><a href="#experience">Досвід</a></li>
+<li><a href="#portfolio">Портфоліо</a></li>
+<li><a href="#contacts">Контакти</a></li>
+</ul>
+
+<div class="wrapper">
+
+<div class="sidebar">
+
+<img src="photo.jpg" class="photo" alt="Фото">
+
+<h3>Особисті дані</h3>
+<p><b>Ім’я</b><br>Мочічук Дарина</p>
+<p><b>Адреса</b><br>м. Івано-Франківськ</p>
+<p><b>Телефон</b><br>+380980629200</p>
+<p><b>Email</b><br>daryna.mochichuk-pi2302@kep.nung.edu.ua</p>
+
+<h3>Інтереси</h3>
+<ul>
+<li>Програмування</li>
+<li>Дизайн</li>
+<li>Подорожі</li>
+</ul>
+
+<h3>Мови</h3>
+<ul>
+<li>Українська — Рідна</li>
+<li>Англійська — Середній рівень</li>
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1 id="about">Дарина</h1>
+
+<h2 class="section-title" id="experience">Досвід роботи</h2>
+
+<div class="job">
+<div class="job-header">
+<span>Написання лабораторних робіт</span>
+<span class="date">2023 – теп. час</span>
+</div>
+<p>Виконання лабораторних робіт з програмування </p>
+</div>
+
+<div class="job">
+<div class="job-header">
+<span>Веб-розробник</span>
+<span class="date">2026 – теп. час</span>
+</div>
+<p>Створення веб-сторінок HTML.</p>
+</div>
+
+<h2 class="section-title">Освіта</h2>
+
+<ol>
+<li>ВСП ФКЕП ІФНТУНГ</li>
+</ol>
+
+<h2 class="section-title">Навички</h2>
+<p>C++, Java, HTML</p>
+
+<h2 class="section-title" id="portfolio">Портфоліо</h2>
+<div class="portfolio-container">
+    <a href="lab1.html" class="btn-link">Лабораторна №1</a>
+    <a href="lab2.html" class="btn-link">Лабораторна №2</a>
+    <a href="lab3.html" class="btn-link">Лабораторна №3</a>
+
+</div>
+
+<h2 class="section-title" id="contacts">Контакти</h2>
+<p>Email: daryna.mochichuk-pi2302@kep.nung.edu.ua</p>
+<p>Телефон: +380980629200</p>
+
+</div>
+</div>
+
+</body>
+</html>
