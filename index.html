@@ -4,136 +4,25 @@
     <meta charset="UTF-8">
     <title>Резюме — Мочічук Дарина</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f6f6f6;
-            color: #333;
-        }
-
-        /* Меню навігації */
-        .menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            background: #f4c2c2;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f6f6f6; color: #333; }
+        .menu { list-style: none; margin: 0; padding: 0; background: #f4c2c2; text-align: center; position: sticky; top: 0; z-index: 100; }
         .menu li { display: inline-block; }
-        .menu a {
-            display: block;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+        .menu a { display: block; padding: 12px 20px; text-decoration: none; color: #333; font-weight: bold; }
         .menu a:hover { background: #eaa5b0; }
-
-        /* Основний контейнер */
-        .wrapper {
-            width: 900px;
-            margin: 20px auto;
-            display: flex;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        /* Ліва колонка */
-        .sidebar {
-            width: 260px;
-            background: #f4c2c2;
-            padding: 20px;
-        }
-
-        .photo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px;
-            object-fit: cover;
-            border: 3px solid white;
-        }
-
-        .sidebar h3 {
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 18px;
-        }
-
-        /* Права частина */
-        .content {
-            flex: 1;
-            padding: 30px;
-        }
-
+        .wrapper { width: 900px; margin: 20px auto; display: flex; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .sidebar { width: 260px; background: #f4c2c2; padding: 20px; }
+        .photo { width: 140px; height: 140px; border-radius: 50%; display: block; margin: 0 auto 20px; object-fit: cover; border: 3px solid white; }
+        .sidebar h3 { border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 25px; font-size: 18px; }
+        .content { flex: 1; padding: 30px; }
         h1 { margin-top: 0; color: #333; }
-
-        .section-title {
-            border-bottom: 2px solid #f4c2c2;
-            margin-top: 30px;
-            padding-bottom: 5px;
-            color: #333;
-        }
-
-        /* Стилі для Портфоліо */
-        .portfolio-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 15px;
-        }
-
-        .lab-block {
-            background: #fffafa;
-            padding: 15px;
-            border-left: 5px solid #f4c2c2;
-            border-radius: 4px;
-        }
-
-        .lab-name {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        .buttons-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .btn-link {
-            display: inline-block;
-            padding: 8px 14px;
-            background-color: #f4c2c2;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: 1px solid #d4a2a2;
-        }
-
-        .btn-link:hover {
-            background-color: #eaa5b0;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
+        .section-title { border-bottom: 2px solid #f4c2c2; margin-top: 30px; padding-bottom: 5px; color: #333; }
+        .portfolio-container { display: flex; flex-direction: column; gap: 25px; margin-top: 15px; }
+        .lab-block { background: #fffafa; padding: 15px; border-left: 5px solid #f4c2c2; border-radius: 4px; }
+        .lab-name { display: block; font-weight: bold; margin-bottom: 10px; color: #555; }
+        .buttons-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .btn-link { display: inline-block; padding: 8px 14px; background-color: #f4c2c2; color: #333; text-decoration: none; border-radius: 5px; font-size: 13px; font-weight: bold; transition: all 0.3s; border: 1px solid #d4a2a2; }
+        .btn-link:hover { background-color: #eaa5b0; transform: translateY(-2px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
         .date { color: #666; font-size: 0.9em; }
     </style>
 </head>
@@ -149,71 +38,52 @@
 <div class="wrapper">
     <div class="sidebar">
         <img src="photo.jpg" class="photo" alt="Фото Дарини">
-        
         <h3>Особисті дані</h3>
         <p><b>Ім’я:</b> Мочічук Дарина</p>
         <p><b>Адреса:</b> м. Івано-Франківськ</p>
         <p><b>Телефон:</b> +380980629200</p>
         <p><b>Email:</b> daryna.mochichuk-pi2302@kep.nung.edu.ua</p>
-
-        <h3>Інтереси</h3>
-        <ul>
-            <li>Програмування</li>
-            <li>Дизайн</li>
-            <li>Подорожі</li>
-        </ul>
-
         <h3>Мови</h3>
         <ul>
             <li>Українська — Рідна</li>
-            <li>Англійська — Intermediate</li>
+            <li>Англійська — Середній рівень</li>
         </ul>
     </div>
 
     <div class="content">
         <h1 id="about">Дарина Мочічук</h1>
-        <p>Студентка ВСП ФКЕП ІФНТУНГ, майбутній веб-розробник.</p>
-
         <h2 class="section-title" id="experience">Досвід та Освіта</h2>
-        <div style="margin-bottom: 15px;">
-            <div class="job-header">
-                <span>Написання лабораторних робіт</span>
-                <span class="date">2023 – теп. час</span>
-            </div>
-            <p>Вивчення HTML, CSS та мов програмування C++ і Java.</p>
-        </div>
+        <p>Студентка ВСП ФКЕП ІФНТУНГ.</p>
 
-        <h2 class="section-title" id="portfolio">Портфоліо (Лабораторні роботи)</h2>
+        <h2 class="section-title" id="portfolio">Портфоліо</h2>
         
         <div class="portfolio-container">
             <div class="lab-block">
                 <span class="lab-name">Лабораторна робота №1:</span>
                 <div class="buttons-grid">
-                    <a href="LR1/example1_structure.html" class="btn-link" target="_blank">Завдання 1</a>
-                    <a href="LR1/example2_text.html" class="btn-link" target="_blank">Завдання 2</a>
-                    <a href="LR1/example3_div_p.html" class="btn-link" target="_blank">Завдання 3</a>
-                    <a href="LR1/example4_span.html" class="btn-link" target="_blank">Завдання 4</a>
-                    <a href="LR1/example5_image.html" class="btn-link" target="_blank">Завдання 5</a>
-                    <a href="LR1/example6_table.html" class="btn-link" target="_blank">Завдання 6</a>
-                    <a href="LR1/example7_lists.html" class="btn-link" target="_blank">Завдання 7</a>
-                    <a href="LR1/example8_links.html" class="btn-link" target="_blank">Завдання 8</a>
-                    <a href="LR1/example9_inner_links.html" class="btn-link" target="_blank">Завдання 9</a>
+                    <a href="Task%201/example1_structure.html" class="btn-link" target="_blank">Завдання 1</a>
+                    <a href="Task%201/example2_text.html" class="btn-link" target="_blank">Завдання 2</a>
+                    <a href="Task%201/example3_div_p.html" class="btn-link" target="_blank">Завдання 3</a>
+                    <a href="Task%201/example4_span.html" class="btn-link" target="_blank">Завдання 4</a>
+                    <a href="Task%201/example5_image.html" class="btn-link" target="_blank">Завдання 5</a>
+                    <a href="Task%201/example6_table.html" class="btn-link" target="_blank">Завдання 6</a>
+                    <a href="Task%201/example7_lists.html" class="btn-link" target="_blank">Завдання 7</a>
+                    <a href="Task%201/example8_links.html" class="btn-link" target="_blank">Завдання 8</a>
+                    <a href="Task%201/example9_inner_links.html" class="btn-link" target="_blank">Завдання 9</a>
                 </div>
             </div>
 
             <div class="lab-block">
                 <span class="lab-name">Лабораторна робота №2:</span>
                 <div class="buttons-grid">
-                    <a href="Lr2/index.html" class="btn-link" target="_blank">Головна (index)</a>
-                    <a href="Lr2/author.html" class="btn-link" target="_blank">Сторінка Автора</a>
+                    <a href="task%202/index.html" class="btn-link" target="_blank">Головна</a>
+                    <a href="task%202/author.html" class="btn-link" target="_blank">Про автора</a>
                 </div>
             </div>
         </div>
 
         <h2 class="section-title" id="contacts">Контакти</h2>
-        <p>Завжди відкрита до нових знань та пропозицій!</p>
-        <p><b>Email:</b> daryna.mochichuk-pi2302@kep.nung.edu.ua</p>
-        <p><b>Телефон:</b> +380980629200</p>
+        <p>Email: daryna.mochichuk-pi2302@kep.nung.edu.ua</p>
     </div>
 </div>
 
