@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Резюме</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f6f6f6;
+}
+
+/* навігація */
+nav{
+    background:#f4c2c2;
+    text-align:center;
+}
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+nav li{ display:inline-block; }
+nav a{
+    display:block;
+    padding:12px 20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+nav a:hover{ background:#eaa5b0; }
+
+/* контейнер */
+.wrapper{
+    width:900px;
+    margin:20px auto;
+    display:flex;
+    background:white;
+}
+
+/* ліва колонка */
+aside{
+    width:260px;
+    background:#f4c2c2;
+    padding:20px;
+    color:#333;
+}
+
+figure{
+    text-align:center;
+}
+
+.photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+aside h2{
+    border-bottom:1px solid #333;
+    padding-bottom:5px;
+    margin-top:20px;
+}
+
+/* права частина */
+main{
+    flex:1;
+    padding:25px;
+}
+
+h1{
+    margin-top:0;
+}
+
+.section-title{
+    border-bottom:2px solid #f4c2c2;
+    margin-top:25px;
+    padding-bottom:5px;
+}
+
+article{
+    margin-bottom:20px;
+}
+
+.job-header{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+}
+
+time{
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Резюме</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">Головна</a></li>
+            <li><a href="#experience">Досвід</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="wrapper">
+
+    <!-- Бічна інформація -->
+    <aside>
+
+        <figure>
+            <img src="photo.jpg" class="photo" alt="Фото">
+            <figcaption>Мочічук Дарина</figcaption>
+        </figure>
+
+        <section>
+            <h2>Особисті дані</h2>
+            <address>
+                м. Івано-Франківськ<br>
+                Телефон: +380980629200<br>
+                Email: daryna.mochichuk-pi2302@kep.nung.edu.ua
+            </address>
+        </section>
+
+        <section>
+            <h2>Інтереси</h2>
+            <ul>
+                <li>Програмування</li>
+                <li>Дизайн</li>
+                <li>Подорожі</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Мови</h2>
+            <ul>
+                <li>Українська — Рідна</li>
+                <li>Англійська — Середній рівень</li>
+            </ul>
+        </section>
+
+    </aside>
+
+    <!-- Основний контент -->
+    <main>
+
+        <section id="about">
+            <h1>Дарина</h1>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Досвід роботи</h2>
+
+            <article>
+                <header class="job-header">
+                    <span>Написання лабораторних робіт</span>
+                    <time datetime="2023">2023 – теп. час</time>
+                </header>
+                <p>Виконання лабораторних робіт з програмування</p>
+            </article>
+
+            <article>
+                <header class="job-header">
+                    <span>Веб-розробник</span>
+                    <time datetime="2026">2026 – теп. час</time>
+                </header>
+                <p>Створення веб-сторінок HTML.</p>
+            </article>
+
+        </section>
+
+        <section>
+            <h2 class="section-title">Освіта</h2>
+            <article>
+                <p>ВСП ФКЕП ІФНТУНГ</p>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="section-title">Навички</h2>
+            <p>C++, Java, HTML</p>
+        </section>
+
+        <section id="contacts">
+            <h2 class="section-title">Контакти</h2>
+            <address>
+                Email: daryna.mochichuk-pi2302@kep.nung.edu.ua<br>
+                Телефон: +380980629200
+            </address>
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+    <p style="text-align:center; padding:15px;">
+        © 2026 Мочічук Дарина
+    </p>
+</footer>
+
+</body>
+</html>
