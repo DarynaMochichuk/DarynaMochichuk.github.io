@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Батарея</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .battery {
+            width: 150px;
+            height: 70px;
+            border: 6px solid #000;
+            position: relative;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        .battery::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: -16px; /* Виносимо за межі рамки */
+            width: 10px;
+            height: 40px;
+            background-color: #000;
+        }
+
+        .battery::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            transition: width 0.5s ease-in-out; 
+        }
+
+        .low::before {
+            width: 30%;
+            background-color: #ff3b30; 
+        }
+
+        .medium::before {
+            width: 65%;
+            background-color: #ffcc00; 
+        }
+
+        .full::before {
+            width: 100%;
+            background-color: #4cd964; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="battery low"></div>
+    <div class="battery medium"></div>
+    <div class="battery full"></div>
+
+</body>
+</html>
