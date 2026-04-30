@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Верстка калькулятора - Float vs Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- ВАРІАНТ 1: FLOAT -->
+        <div class="calc-container float-version">
+            <div class="calc-top">Casio 3234</div>
+            <div class="calc-body">
+                <input type="text" class="calc-display" value="лоррпапр">
+                <div class="solar-panel"></div>
+                
+                <div class="buttons-grid clearfix">
+                    <button class="btn">7</button><button class="btn">8</button><button class="btn">9</button><button class="btn">+</button>
+                    <button class="btn">4</button><button class="btn">5</button><button class="btn">6</button><button class="btn">-</button>
+                    <button class="btn">1</button><button class="btn">2</button><button class="btn">3</button><button class="btn">/</button>
+                    <button class="btn">,</button><button class="btn">0</button><button class="btn">=</button><button class="btn">*</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВАРІАНТ 2: POSITION -->
+        <div class="calc-container position-version">
+            <div class="calc-top">Casio 3234</div>
+            <div class="calc-body">
+                <input type="text" class="calc-display" value="лоррпапр">
+                <div class="solar-panel"></div>
+                
+                <div class="buttons-area">
+                    <!-- Кнопки позиціонуються абсолютно відносно .buttons-area -->
+                    <button class="btn p-r1-c1">7</button><button class="btn p-r1-c2">8</button>
+                    <button class="btn p-r1-c3">9</button><button class="btn p-r1-c4">+</button>
+                    
+                    <button class="btn p-r2-c1">4</button><button class="btn p-r2-c2">5</button>
+                    <button class="btn p-r2-c3">6</button><button class="btn p-r2-c4">-</button>
+                    
+                    <button class="btn p-r3-c1">1</button><button class="btn p-r3-c2">2</button>
+                    <button class="btn p-r3-c3">3</button><button class="btn p-r3-c4">/</button>
+                    
+                    <button class="btn p-r4-c1">,</button><button class="btn p-r4-c2">0</button>
+                    <button class="btn p-r4-c3">=</button><button class="btn p-r4-c4">*</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
