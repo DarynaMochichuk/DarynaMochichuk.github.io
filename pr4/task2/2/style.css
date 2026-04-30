@@ -1,0 +1,22 @@
+body {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+    box-shadow:
+        0 0 0 40px yellow,
+        0 0 0 80px blue;
+}

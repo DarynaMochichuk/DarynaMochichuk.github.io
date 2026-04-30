@@ -1,0 +1,46 @@
+body {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* синє коло */
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: blue;
+    position: relative;
+}
+
+/* жовте кільце */
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: yellow;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* центр + текст */
+.circle::after {
+    content: "MD";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: #eee;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
