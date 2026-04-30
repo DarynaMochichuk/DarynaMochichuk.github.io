@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    border: 1px solid #ffffff; 
+    text-align: left;
+}
+
+.data-table thead th {
+    background-color: #89c4e1; 
+    color: white;
+    font-weight: bold;
+}
+
+/* Стилізація тіла таблиці */
+.data-table tbody td {
+    background-color: #add8e6; 
+    color: #444;
+}
+.data-table td.company-name {
+    font-weight: bold;
+    color: white;
+}

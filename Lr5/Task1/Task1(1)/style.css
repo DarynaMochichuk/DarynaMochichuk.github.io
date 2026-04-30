@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.table-container {
+    width: 100%;
+    border: 1px solid #ffffff;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+.cell {
+    float: left; 
+    width: 20%;  
+    padding: 15px;
+    border: 1px solid #ffffff; 
+    background-color: #add8e6; 
+    color: #444;
+    text-align: left;
+}
+
+.header .cell {
+    background-color: #89c4e1;
+    color: white;
+    font-weight: bold;
+}
+
+.cell.first-col {
+    font-weight: bold;
+    color: white;
+}
