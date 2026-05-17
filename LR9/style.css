@@ -1,0 +1,299 @@
+/* ==========================================================================
+   1. Базові налаштування (Reset & Variables)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   2. Повторювані компоненти (DRY принцип)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn--pink {
+    background-color: #ff5294;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. Шапка (Header)
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #79b4d9;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+/* ==========================================================================
+   4. Головний екран (Hero)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('img/jumbotron.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   5. Секція Послуг (Services)
+   ========================================================================== */
+.services__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-card__icon {
+    font-size: 2.5rem;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.service-card__text {
+    font-size: 0.9rem;
+    color: #888888;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   6. Додаткова секція: Галерея (Gallery)
+   ========================================================================== */
+.gallery__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery__item {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.gallery__item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery__item:hover img {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   7. Секція Блогу (Blog)
+   ========================================================================== */
+.blog__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.blog-post__image {
+    flex: 0 0 260px;
+}
+
+.blog-post__image img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.blog-post__content {
+    flex: 1;
+}
+
+.blog-post__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.blog-post__date {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+
+.blog-post__text {
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+/* ==========================================================================
+   8. Підвал (Footer)
+   ========================================================================== */
+.footer {
+    background-color: #3b434e;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer__logo {
+    font-size: 1.4rem;
+    color: #a5c7dd;
+    margin-bottom: 20px;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.footer__copyright {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   9. Адаптивність (Media Queries)
+   ========================================================================== */
+
+/* Планшети та мобільні пристрої (до 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .hero__title {
+        font-size: 1.8rem;
+    }
+
+    .services__grid, .gallery__grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .blog-post {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .blog-post__image {
+        width: 100%;
+        flex: none;
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+/* Маленькі смартфони (до 480px) */
+@media (max-width: 480px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .footer__nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
