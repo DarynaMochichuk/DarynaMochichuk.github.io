@@ -1,0 +1,325 @@
+/* ==========================================================================
+   1. СКИДАННЯ СТИЛІВ ТА БАЗОВІ НАЛАШТУВАННЯ
+   ========================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   2. ГОЛОВНА СІТКА (ДЕCКТОП ЗА ЗАМОВЧУВАННЯМ)
+   ========================================================================= */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 80px;
+}
+
+/* ==========================================================================
+   3. ЛІВА КОЛОНКА: СТИЛІ ФОРМИ
+   ========================================================================= */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Рядок для Adress + Postcode */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-2 { flex: 2; }
+.flex-1 { flex: 1; }
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Поля введення з нижньою лінією з макета */
+.form-group input {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #333333;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #999999;
+}
+
+.form-group input:focus {
+    border-bottom-color: #1a1a1a;
+}
+
+/* Стан помилки валідації (червона лінія та текст) */
+.form-group.error-state input {
+    border-bottom-color: #ff3333;
+    color: #ff3333;
+}
+
+.error-message {
+    color: #ff3333;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+/* Кастомна зона завантаження файлу */
+.file-upload-container {
+    margin-top: 15px;
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px dashed #cccccc;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: #f0f0f0;
+}
+
+.file-input {
+    display: none; /* Ховаємо дефолтну кнопку */
+}
+
+.upload-icon {
+    font-size: 14px;
+    color: #666666;
+}
+
+.upload-text {
+    font-size: 14px;
+    color: #666666;
+}
+
+.file-hint {
+    font-size: 10px;
+    color: #999999;
+    margin-top: 8px;
+}
+
+/* Кнопка SUBMIT */
+.btn-submit {
+    background-color: #008f26; /* Зелений колір з Figma */
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #00751f;
+}
+
+/* Чекбокс NDA */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555555;
+    margin-top: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. ПРАВА КОЛОНКА: КОНТАКТНА ІНФОРМАЦІЯ
+   ========================================================================= */
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 15px;
+}
+
+.info-block h3, 
+.newsletter-block h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+/* Офіси */
+.office-item {
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.office-item .country {
+    font-weight: 600;
+    color: #333333;
+}
+
+.office-item .address-details {
+    color: #666666;
+}
+
+/* Блок швидких запитів (Параметри Автолейауту з Figma) */
+.inquiries-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px; /* Відступ 32px з коду Figma */
+}
+
+.inquiries-block h3 {
+    margin-bottom: 0 !important;
+}
+
+/* Елемент списку телефонів */
+.phone-item {
+    display: flex;
+    align-items: center; 
+    gap: 16px; /* Відступ між прапором та номером */
+    width: 100%;
+}
+
+/* Прапори (Фікс ламання картинок) */
+.flag-icon {
+    width: 24px;         /* Чітка ширина іконки */
+    height: 16px;        /* Чітка висота іконки */
+    object-fit: cover;   /* Вписує картинку без деформацій */
+    flex-shrink: 0;      /* Забороняє флексу стискати прапор */
+    display: block;
+}
+
+.phone-item a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap; /* Номер не переноситься на новий рядок */
+}
+
+.phone-item a:hover {
+    text-decoration: underline;
+}
+
+/* Підписка на новини */
+.newsletter-block h3 {
+    text-transform: none;
+    font-size: 14px;
+}
+
+.newsletter-form {
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+    align-items: center;
+}
+
+.newsletter-input {
+    border: none;
+    padding: 10px 0;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+.btn-newsletter {
+    background-color: #008f26;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-newsletter:hover {
+    background-color: #00751f;
+}
+
+/* ==========================================================================
+   5. АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (MEDIA QUERIES)
+   ========================================================================= */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    /* Зміна на 1 колонку (Блок з інфо падає під форму) */
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* Адреса та поштовий індекс стають одне під одним */
+    .form-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .info-sidebar {
+        border-top: 1px solid #eeeeee;
+        padding-top: 40px;
+    }
+}

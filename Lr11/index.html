@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <main class="contact-section">
+            
+            <section class="form-container">
+                <h1 class="section-title">Contact us</h1>
+                <p class="section-subtitle">Need an experienced and skilled hand with custom IT projects? Fill out the form to get a free consultation.</p>
+                
+                <form action="#" method="POST" enctype="multipart/form-data" class="main-form">
+                    
+                    <div class="form-group">
+                        <input type="text" id="company-name" placeholder="Your Company Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="business-nature" placeholder="Nature of Business">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <input type="text" id="address" placeholder="Adress">
+                        </div>
+                        <div class="form-group flex-1">
+                            <input type="text" id="postcode" placeholder="Postcode">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="Contact name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="contact-phone" placeholder="Contact Phone">
+                    </div>
+
+                    <div class="form-group error-state">
+                        <input type="email" id="email" placeholder="email@gmail" value="email@gmail">
+                        <span class="error-message">Please, enter valid email address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="url" id="linkedin" placeholder="Linkedin">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="idea" placeholder="Let's talk about your idea">
+                    </div>
+
+                    <div class="file-upload-container">
+                        <label class="file-upload-label">
+                            <input type="file" name="additional-file" class="file-input">
+                            <span class="upload-icon">▲</span>
+                            <span class="upload-text">Upload Additional file</span>
+                        </label>
+                        <p class="file-hint">Attach file. File size of your documents should not exceed 10MB</p>
+                    </div>
+
+                    <button type="submit" class="btn-submit">SUBMIT</button>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="nda" name="nda">
+                        <label for="nda">I want to protect my data by signing an NDA</label>
+                    </div>
+
+                </form>
+            </section>
+
+            <aside class="info-sidebar">
+                
+                <div class="info-block">
+                    <h3>Offices</h3>
+                    <div class="office-item">
+                        <p class="country">United States</p>
+                        <p class="address-details">500 5th Avenue Suite 400, NY 10110</p>
+                    </div>
+                    <div class="office-item">
+                        <p class="country">United Kingdom</p>
+                        <p class="address-details">High St, Bromley BR1 1DN</p>
+                    </div>
+                    <div class="office-item">
+                        <p class="country">France</p>
+                        <p class="address-details">80 avenue des Terroirs de France, Paris</p>
+                    </div>
+                </div>
+
+                <div class="info-block inquiries-block">
+                    <h3>For Quick Inquiries</h3>
+                    
+                    <div class="phone-item">
+                        <img src="./photo1.jpg" alt="UK Flag" class="flag-icon">
+                        <a href="tel:+447777777777">+44 7777777777</a>
+                    </div>
+                    
+                    <div class="phone-item">
+                        <img src="./photo2.jpg" alt="US Flag" class="flag-icon">
+                        <a href="tel:+13333333330">+1 3333333330</a>
+                    </div>
+                </div>
+
+                <div class="newsletter-block">
+                    <h3>Would you like to join our newsletter?</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email" class="newsletter-input">
+                        <button type="button" class="btn-newsletter">✓</button>
+                    </div>
+                </div>
+
+            </aside>
+
+        </main>
+    </div>
+
+</body>
+</html>
