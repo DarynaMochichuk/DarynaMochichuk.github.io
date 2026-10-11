@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Завдання 1 -->
+    <section class="task-section">
+        <h2>Завдання 1</h2>
+        <div class="form-group">
+            <label for="fahrenheit">Температура за Фаренгейтом (°F):</label>
+            <input type="number" id="fahrenheit" step="any">
+        </div>
+        <div class="form-group">
+            <label for="celsius">Температура за Цельсієм (°C):</label>
+            <input type="number" id="celsius" step="any">
+        </div>
+    </section>
+
+    <!-- Завдання 2 -->
+    <section class="task-section">
+        <h2>Завдання 2</h2>
+        <div id="score-task2">Загальний рахунок 0% (0 правильних відповідей з 0)</div>
+        <button id="next-btn-task2">наступне завдання</button>
+        <div class="task-box">
+            <span id="question-task2">3 × 4 =</span>
+            <input type="number" id="answer-task2">
+            <button id="check-btn-task2">перевірити</button>
+        </div>
+        <div id="result-task2" class="result-msg"></div>
+    </section>
+
+    <!-- Завдання 3 -->
+    <section class="task-section">
+        <h2>Завдання 3</h2>
+        <div id="score-task3">Загальний рахунок 0% (0 правильних відповідей з 0)</div>
+        <button id="next-btn-task3">наступне завдання</button>
+        <div id="question-task3" class="task-question">3 × 4 =</div>
+        <div id="options-task3" class="options-group"></div>
+        <div id="result-task3" class="result-msg"></div>
+    </section>
+
+    <!-- Завдання 4 -->
+    <section class="task-section">
+        <h2>Завдання 4</h2>
+        <div id="rotator"></div>
+    </section>
+
+    <!-- Завдання 5 -->
+    <section class="task-section">
+        <h2>Завдання 5</h2>
+        <div class="captcha-wrapper">
+            <label for="captcha-input">Введіть число</label>
+            <div id="captcha-container"></div>
+            <input type="text" id="captcha-input">
+            <div id="captcha-result" class="result-msg"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

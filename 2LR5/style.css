@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.task-section {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 220px;
+}
+
+.result-msg {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Стилі для Завдання 2 */
+.task-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#answer-task2 {
+    width: 160px;
+    padding: 2px 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Приховування стрілочок у поля числового вводу */
+#answer-task2::-webkit-outer-spin-button,
+#answer-task2::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#answer-task2[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Стилі для Завдання 4 */
+#rotator {
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.rotator-header {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.rotator-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rotator-img-container {
+    width: 350px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotator-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.rotator-nav {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+    width: 60px;
+}
+
+.rotator-nav.hidden {
+    visibility: hidden;
+}
+
+.rotator-footer {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+}
+
+/* Стилі для Завдання 5 */
+.captcha-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-family: sans-serif;
+}
+
+.captcha-box {
+    display: flex;
+    gap: 4px;
+    padding: 4px 6px;
+    background: #ffffff;
+    border: 1px solid #767676;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.pixel-digit {
+    display: grid;
+    grid-template-columns: repeat(3, 6px);
+    grid-template-rows: repeat(5, 6px);
+    gap: 1px;
+}
+
+.pixel-digit span {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+
+.pixel-digit span.on {
+    background-color: #ff0000;
+}
+
+#captcha-input {
+    width: 105px;
+    padding: 2px 4px;
+    font-size: 16px;
+    border: 1px solid #767676;
+    box-sizing: border-box;
+}
