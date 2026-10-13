@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px 100px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Основне біле вікно з закругленими кутами та м'якою тінню */
+.generator {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* Перемикач вкладок вгорі  */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 12px 28px;
+  border: none;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Двоколонковий макет  */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Ліва панель з елементами керування */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h2 {
+  margin: 0 0 6px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.tab-subtitle {
+  margin: 0 0 28px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Стилі для рядків регулювання */
+.control {
+  margin-bottom: 20px;
+}
+
+.control label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.control input[type="range"] {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* Білий прямокутний індикатор значення*/
+.value-badge {
+  min-width: 65px;
+  padding: 6px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.control input[type="color"],
+.control select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+}
+
+/* Права панель  */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preview-section h2,
+.result h2 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Світла картка для Preview  */
+.preview-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
+
+/* Сама фігура Preview  */
+.preview {
+  width: 280px;
+  height: 150px;
+  background: #93c5fd;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 10px 15px -3px rgba(147, 197, 253, 0.3);
+  transition: all 0.15s ease-in-out;
+}
+
+.preview.hovered {
+  outline: 3px solid #1d4ed8;
+}
+
+#preview-button {
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#coordinates {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Темний прямокутник для коду  */
+.code-box {
+  position: relative;
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+#css-code {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+}
+
+/* Кнопка скопіювати з іконкою у верхньому правому кутку */
+#copy-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#copy-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+#copy-message {
+  margin: 6px 0 0 0;
+  font-size: 13px;
+  color: #16a34a;
+  min-height: 20px;
+}
+
+/* Форма додавання пресетів */
+#preset-form {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+#preset-form h2 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+#preset-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+#preset-form input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#preset-form input.focused {
+  outline: 2px solid #2563eb;
+}
+
+#preset-form input.error {
+  border-color: #ef4444;
+}
+
+#preset-error {
+  display: block;
+  min-height: 20px;
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+#preset-form button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Кнопка скролу */
+#scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#scroll-top.visible {
+  display: block;
+}
