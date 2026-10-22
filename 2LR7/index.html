@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Wherever you go, there you are</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            color: #0056b3;
+        }
+        div {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        input[type="button"], button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        input[type="button"]:hover, button:hover {
+            background-color: #0056b3;
+        }
+        .destination-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-top: 15px;
+        }
+        .destination-box input[type="text"] {
+            padding: 6px;
+            margin-right: 10px;
+            width: 160px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Geolocation & Map Tracker</h2>
+
+    <form>
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+
+    <div id="location">Your location will go here.</div>
+    <div id="distance">Distance from College will go here.</div>
+
+    <div class="destination-box">
+        <label>Пункт призначення:</label><br><br>
+        <input type="text" id="destLat" placeholder="Широта (Lat)" value="48.9226">
+        <input type="text" id="destLng" placeholder="Довгота (Lng)" value="24.7111">
+        <button type="button" id="scrollToDest">Скролити до пункту призначення</button>
+    </div>
+
+    <!-- Контейнер для мапи Leaflet -->
+  
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    <!-- Підключення скрипта Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
