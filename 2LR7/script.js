@@ -1,7 +1,7 @@
 // Координати коледжу
 const ourCoords = {
-    latitude: 48.9272,
-    longitude: 24.7435
+    latitude: 48.94294,
+    longitude: 24.73358
 };
 
 let watchId = null;
