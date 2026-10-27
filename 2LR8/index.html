@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>ToDo List</h2>
+
+    <div class="todo-container">
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Додайте завдання">
+        </div>
+        
+        <div class="controls">
+            <span>Фільтр:</span>
+            <select id="sortSelect">
+                <option value="all">Усі</option>
+                <option value="active">Невиконані</option>
+                <option value="completed">Виконані</option>
+            </select>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
